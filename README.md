@@ -3,7 +3,7 @@ This repo is personal Alfred workflow.
 
 ### Original
 - [x] IP Tools
-- [ ] Zoom / Umeet Assitant
+- [x] Zoom / Umeet Assitant
 - [x] Timestamp to Datetime
 
 ### Collection
