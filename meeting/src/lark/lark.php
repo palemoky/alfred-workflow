@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @desc: Open a Umeet meeting link without the browser opening.
+ * @desc Open a Lark meeting link without the browser opening.
  * @author: Palemoky
  * @link: https://blog.palemoky.com
  */
 
 use Alfred\Workflows\Workflow;
 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 $workflow = new Workflow;
 
@@ -20,31 +20,31 @@ if (empty($keyword)) {
         ->title('Start new meeting')
         ->arg('start')
         ->valid(true)
-        ->icon('src/new_meeting.png');
+        ->icon('src/imgs/imgs/new_meeting.png');
 
     $workflow->result()
         ->title('Enter ID')
-        ->arg('join?confno=' . $keyword)
+        ->arg($keyword)
         ->valid(true)
-        ->icon('src/meeting_room.png');
+        ->icon('src/imgs/meeting_room.png');
 } elseif (is_numeric($keyword)) {
     $workflow->result()
         ->title('Enter ID')
-        ->arg('join?confno=' . $keyword)
+        ->arg($keyword)
         ->valid(true)
-        ->icon('src/meeting_room.png');
+        ->icon('src/imgs/meeting_room.png');
 } elseif (false !== filter_var($keyword, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED)) {
     $meetingId = substr($keyword, strrpos($keyword, '/') + 1);
     $workflow->result()
         ->title('Enter ID')
-        ->arg('join?confno=' . $meetingId)
+        ->arg($meetingId)
         ->valid(true)
-        ->icon('src/meeting_room.png');
+        ->icon('src/imgs/meeting_room.png');
 } else {
     $workflow->result()
         ->title('Invalid meeting ID or link.')
         ->valid(true)
-        ->icon('src/error.png');
+        ->icon('src/imgs/error.png');
 }
 
 echo $workflow->output();
