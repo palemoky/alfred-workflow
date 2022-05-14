@@ -20,26 +20,26 @@ if (empty($keyword)) {
         ->title('Start new meeting')
         ->arg('start')
         ->valid(true)
-        ->icon('src/imgs/imgs/new_meeting.png');
+        ->icon('src/imgs/new_meeting.png');
 
     $workflow->result()
         ->title('Enter ID')
         ->arg($keyword)
         ->valid(true)
-        ->icon('src/imgs/meeting_room.png');
+        ->icon('src/imgs/join_meeting.png');
 } elseif (is_numeric($keyword)) {
     $workflow->result()
         ->title('Enter ID')
         ->arg($keyword)
         ->valid(true)
-        ->icon('src/imgs/meeting_room.png');
+        ->icon('src/imgs/join_meeting.png');
 } elseif (false !== filter_var($keyword, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED)) {
     $meetingId = substr($keyword, strrpos($keyword, '/') + 1);
     $workflow->result()
         ->title('Enter ID')
         ->arg($meetingId)
         ->valid(true)
-        ->icon('src/imgs/meeting_room.png');
+        ->icon('src/imgs/join_meeting.png');
 } else {
     $workflow->result()
         ->title('Invalid meeting ID or link.')
