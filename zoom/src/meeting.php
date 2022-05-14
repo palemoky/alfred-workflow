@@ -8,7 +8,7 @@
 
 use Alfred\Workflows\Workflow;
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $workflow = new Workflow;
 
