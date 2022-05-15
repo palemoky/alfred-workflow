@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @desc: Open a Umeet meeting link without the browser opening.
+ * @desc Open a Lark meeting link without the browser opening.
  * @author: Palemoky
  * @link: https://blog.palemoky.com
  */
@@ -16,30 +16,28 @@ $keyword = $argv[1];
 $keyword = trim(str_replace(' ', '', $keyword));
 
 if (empty($keyword)) {
-    // zoommtg://zoom.us/start
     $workflow->result()
         ->title('Start new meeting')
         ->arg('start')
         ->valid(true)
         ->icon('src/imgs/new_meeting.png');
 
-    // zoommtg://zoom.us/join?confno=12345678
     $workflow->result()
         ->title('Enter ID')
-        ->arg('join?confno=' . $keyword)
+        ->arg($keyword)
         ->valid(true)
         ->icon('src/imgs/join_meeting.png');
 } elseif (is_numeric($keyword)) {
     $workflow->result()
         ->title('Enter ID')
-        ->arg('join?confno=' . $keyword)
+        ->arg($keyword)
         ->valid(true)
         ->icon('src/imgs/join_meeting.png');
 } elseif (false !== filter_var($keyword, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED)) {
     $meetingId = substr($keyword, strrpos($keyword, '/') + 1);
     $workflow->result()
         ->title('Enter ID')
-        ->arg('join?confno=' . $meetingId)
+        ->arg($meetingId)
         ->valid(true)
         ->icon('src/imgs/join_meeting.png');
 } else {

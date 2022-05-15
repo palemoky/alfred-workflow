@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>bundleid</key>
-	<string>com.palemoky.zoom</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -64,11 +62,11 @@
 	<key>createdby</key>
 	<string>Palemoky</string>
 	<key>description</key>
-	<string>Open a Zoom meeting link without the browser opening</string>
+	<string>Open a Umeet meeting link without the browser opening</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Zoom</string>
+	<string>Umeet - COPY</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -87,7 +85,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>zm</string>
+				<string>um</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -105,9 +103,9 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Launch Zoom</string>
+				<string>Launch Umeet</string>
 				<key>title</key>
-				<string>Zoom</string>
+				<string>Umeet</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -133,7 +131,7 @@
 $meetingId = ltrim(strstr($argv[1], '='), '=');
 
 if (!empty($meetingId)) {
-    echo 'https://zoom.us/j/' . $meetingId;
+    echo 'https://systeccloud.com/j/' . $meetingId;
 }</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -157,7 +155,7 @@ if (!empty($meetingId)) {
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>zoommtg://zoom.us/{query}</string>
+				<string>systeccloud://systeccloud.com/{query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -178,9 +176,9 @@ if (!empty($meetingId)) {
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Launching! Your Zoom link has been copied to clipboard! Paste away!</string>
+				<string>Launching! Your Umeet link has been copied to clipboard! Paste away!</string>
 				<key>title</key>
-				<string>Zoom link on clipboard</string>
+				<string>Umeet link on clipboard</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -210,7 +208,7 @@ if (!empty($meetingId)) {
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Open a Zoom meeting link without the browser opening.</string>
+	<string>Open a Umeet meeting link without the browser opening.</string>
 	<key>uidata</key>
 	<dict>
 		<key>20226435-BEA5-4C3F-9E30-3C9C3BCE3BEB</key>
