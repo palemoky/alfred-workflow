@@ -49,10 +49,8 @@
 当我们通过链接打开本地应用时，都是通过 URL Schema 实现的，比如当我们在浏览器中打开 `https://zoom.us/j/123456` 时，在调试窗口的 Network
 中可以看到，实际打开的是 `zoommtg://zoom.us/join?confno=123456`。要确定一个应用的 URL Schema 有两种方式：
 
-1. 通过调试窗口的 Network 查看
-2. 通过图示的方法查看`Info.plist`文件
-   ![浏览器调试窗口](https://raw.githubusercontent.com/palemoky/alfred-workflow/master/imgs/zoom_chrome_schemes.png)
-   ![应用包](https://raw.githubusercontent.com/palemoky/alfred-workflow/master/imgs/app_url_schemes.png)
+1. 通过调试窗口的 Network [查看](https://raw.githubusercontent.com/palemoky/alfred-workflow/master/imgs/zoom_chrome_schemes.png)
+2. 通过图示的方法[查看`Info.plist`文件](https://raw.githubusercontent.com/palemoky/alfred-workflow/master/imgs/app_url_schemes.png)
 
 ### Workflow变量
 
