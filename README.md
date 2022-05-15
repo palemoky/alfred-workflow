@@ -12,7 +12,7 @@
         - [x] 通过链接入会
         - [ ] 创建会议（未知创建会议的 Schema）
     - 钉钉（Dingtalk）
-        - [ ] 通过链接入会（非规范化链接，已知 URL Schema`dingtalk://dingtalkclient/action/join_conf?roomCode={query}`，会议链接为`https://meeting.dingtalk.com/app?roomCode=123456`，通过会议链接无法直接进入会议）
+        - [ ] 通过链接入会（非规范化链接，已知 URL Schema 为`dingtalk://dingtalkclient/action/join_conf?roomCode={query}`，会议链接为`https://meeting.dingtalk.com/app?roomCode=123456`，通过会议链接无法直接进入会议）
         - [ ] 创建会议（未知创建会议的 Schema）
     - 腾讯会议（Tencent Meeting）
         - [ ] 由于分享链接中没有会议号，同时无法获取 URL Schema，无法完成任何功能
