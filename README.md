@@ -2,7 +2,7 @@
 
 本仓库为个人开发的 Alfred Workflow，包括以下功能：
 
-- [Meeting](https://github.com/palemoky/alfred-workflow/tree/master/meeting)
+- [会议](https://github.com/palemoky/alfred-workflow/tree/master/meeting)
     - Zoom / Umeet
         - [x] 创建会议
         - [x] 通过 ID 入会
