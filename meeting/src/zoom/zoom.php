@@ -14,6 +14,9 @@ $workflow = new Workflow;
 
 $keyword = $argv[1];
 $keyword = trim(str_replace(' ', '', $keyword));
+if (false !== strpos($keyword, '?')) {
+    $keyword = str_replace('?', '&', $keyword);
+}
 
 if (empty($keyword)) {
     // zoommtg://zoom.us/start
